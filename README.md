@@ -42,3 +42,78 @@ Key Features
      Live transcript + gloss visualization
      Progress indicators
      Download final video
+    
+🗂️Project Structure
+Sign-Language-Generator/
+│── raw_video_dataset/
+│   ├── alphabet/ (raw letters)
+│   ├── videos/ (WLASL clips)
+│   └── WLASL_v0.3.json
+│
+│── processed_pose_dataset/ (generated pose videos)
+│── output_videos/
+│── downloads/
+│
+│── alphabet_processor.py
+│── wlasl_processor.py
+│── app.py (Streamlit)
+│── requirements.txt
+│── README.md
+
+Tech Stack
+Component	Technologies Used
+Frontend	Streamlit
+Audio Processing	yt-dlp, Whisper
+Gloss Generation	Google Gemini API
+Pose Estimation	MediaPipe
+Video Processing	OpenCV, MoviePy
+Dataset	WLASL 2000+ word-level videos
+
+How to Run the Project
+1. Clone the Repository
+git clone https://github.com/your-username/Sign-Language-Generator.git
+cd Sign-Language-Generator
+2. Install Dependencies
+pip install -r requirements.txt
+3. Install FFmpeg
+(Required for moviepy & yt-dlp)
+   Windows:
+   choco install ffmpeg
+
+4. Run Data Processing Scripts
+For Alphabet:
+python alphabet_processor.py
+For WLASL:
+python wlasl_processor.py
+5. Run the Streamlit App
+streamlit run app.py
+
+Input → Output Pipeline
+YouTube URL
+   ↓
+yt-dlp Audio Extraction
+   ↓
+Whisper Speech-to-Text
+   ↓
+Gemini: English → ASL Gloss
+   ↓
+Gloss Tokenization
+   ↓
+Clip Fetching (word → MP4)
+   ↓
+Pose Animation Stitching
+   ↓
+Final ASL Video with Captions
+
+Use Cases: 
+   Accessible educational content
+   Interpretation for deaf/hard-of-hearing users
+   ASL teaching tools
+   Sign language research & dataset processing
+
+Future Improvements: 
+Add facial keypoints (MediaPipe Holistic)
+Add non-manual markers (NMM)
+Switch from WLASL to ISL dataset
+Improve gloss grammar accuracy
+Add customizable avatars
