@@ -1,0 +1,10 @@
+processed_pose_dataset/
+raw_video_dataset/
+downloads/
+output_videos/
+__pycache__/
+*.mp4
+*.gif
+*.jpg
+*.png
+venv/
