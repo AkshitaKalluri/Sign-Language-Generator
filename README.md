@@ -117,3 +117,5 @@ Add non-manual markers (NMM)
 Switch from WLASL to ISL dataset
 Improve gloss grammar accuracy
 Add customizable avatars
+
+Dataset Download: https://drive.google.com/drive/folders/1tO_YFPwaKeOtKMiYeba2eDBfr2MvpDzq?usp=drive_link 
