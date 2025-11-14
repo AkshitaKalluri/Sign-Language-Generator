@@ -1,0 +1,10 @@
+opencv-python
+mediapipe
+numpy
+pillow
+tqdm
+streamlit
+whisper
+yt-dlp
+moviepy
+requests
